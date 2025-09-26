@@ -38,7 +38,7 @@ const teenList = people.filter(p =>p.age >= 13 && p.age <= 19);
             <ul>
         {names.map((name, index) => (
           <li key={index}>{name}</li>
-        ))} 
+        ))}   
       </ul>
             <p>list people:</p>
             <ul>
