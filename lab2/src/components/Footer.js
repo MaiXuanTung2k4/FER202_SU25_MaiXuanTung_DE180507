@@ -1,13 +1,12 @@
-import React from "react";
-import { Container } from "react-bootstrap";
+import React from 'react';
 
 function Footer() {
   return (
-    <div className="bg-dark text-white text-center py-3" id="contact">
-      <Container>
+    <footer className="bg-dark text-white text-center py-3" id="contact">
+      <div className="container">
         <p>&copy; 2025 PizzaShop. All rights reserved.</p>
-      </Container>
-    </div>
+      </div>
+    </footer>
   );
 }
 

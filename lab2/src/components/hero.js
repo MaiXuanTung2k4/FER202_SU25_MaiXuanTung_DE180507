@@ -1,15 +1,14 @@
-import React from "react";
-import { Container, Button } from "react-bootstrap";
+import React from 'react';
 
 function Hero() {
   return (
-    <div className="bg-dark text-white text-center py-5">
-      <Container>
+    <header className="bg-dark text-white text-center py-5">
+      <div className="container">
         <h1>Welcome to PizzaShop</h1>
         <p>The best pizza in town, fresh & delicious</p>
-        <Button variant="warning" size="lg">Order Now</Button>
-      </Container>
-    </div>
+        <a href="#menu" className="btn btn-warning btn-lg">Order Now</a>
+      </div>
+    </header>
   );
 }
 

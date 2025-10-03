@@ -1,21 +1,26 @@
-import React from "react";
-import { Container, Nav, Navbar as BsNavbar } from "react-bootstrap";
+import React from 'react';
 
 function Navbar() {
   return (
-    <BsNavbar bg="dark" variant="dark" expand="lg">
-      <Container>
-        <BsNavbar.Brand href="#">PizzaShop</BsNavbar.Brand>
-        <BsNavbar.Toggle aria-controls="basic-navbar-nav" />
-        <BsNavbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link href="#">Home</Nav.Link>
-            <Nav.Link href="#menu">Menu</Nav.Link>
-            <Nav.Link href="#contact">Contact</Nav.Link>
-          </Nav>
-        </BsNavbar.Collapse>
-      </Container>
-    </BsNavbar>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div className="container">
+        <a className="navbar-brand" href="#">PizzaShop</a>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item"><a className="nav-link" href="#menu">Menu</a></li>
+            <li className="nav-item"><a className="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   );
 }
 

@@ -1,31 +1,25 @@
-import React from "react";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
-
-const pizzas = [
-  { id: 1, name: "Margherita", price: "$8", img: "/images/pizza1.jpg" },
-  { id: 2, name: "Pepperoni", price: "$10", img: "/images/pizza2.jpg" },
-  { id: 3, name: "Hawaiian", price: "$12", img: "/images/pizza3.jpg" },
-];
+import React from 'react';
 
 function Menu() {
   return (
-    <Container className="py-5" id="menu">
-      <h2 className="text-center mb-4">Our Menu</h2>
-      <Row>
-        {pizzas.map((pizza) => (
-          <Col md={4} key={pizza.id} className="mb-4">
-            <Card>
-              <Card.Img variant="top" src={pizza.img} />
-              <Card.Body>
-                <Card.Title>{pizza.name}</Card.Title>
-                <Card.Text>{pizza.price}</Card.Text>
-                <Button variant="primary">Order</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-    </Container>
+    <section className="py-5" id="menu">
+      <div className="container">
+        <h2 className="text-center mb-4">Our Menu</h2>
+        <div className="row">
+          <div className="col-md-4 mb-4">
+            <div className="card">
+              <img src="/images/pizza1.jpg" className="card-img-top" alt="Pizza 1" />
+              <div className="card-body">
+                <h5 className="card-title">Margherita</h5>
+                <p className="card-text">$8</p>
+                <a href="#" className="btn btn-primary">Order</a>
+              </div>
+            </div>
+          </div>
+          {/* Thêm các col-md-4 khác cho pizza khác */}
+        </div>
+      </div>
+    </section>
   );
 }
 
