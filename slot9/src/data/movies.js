@@ -1,0 +1,43 @@
+// src/data/movies.js
+export const movies = [
+  {
+    id: 1,
+    title: "Galactic Wars",
+    description: "Epic space battles for galactic control.",
+    poster: "/images/movie1.jfif",
+    genre: "Sci-Fi",
+    year: 2022,
+    country: "USA",
+    duration: 132,
+  },
+  {
+    id: 2,
+    title: "Laugh Out Loud",
+    description: "Comedy about friendship and second chances.",
+    poster: "/images/movie2.jfif",
+    genre: "Comedy",
+    year: 2021,
+    country: "UK",
+    duration: 105,
+  },
+  {
+    id: 3,
+    title: "Deep Blue",
+    description: "A gripping ocean survival drama.",
+    poster: "/images/movie3.jfif",
+    genre: "Drama",
+    year: 2019,
+    country: "Australia",
+    duration: 118,
+  },
+  {
+    id: 4,
+    title: "The Last Samurai",
+    description: "A soldier discovers honor in a foreign land.",
+    poster: "/images/movie4.jpg",
+    genre: "Action",
+    year: 2003,
+    country: "Japan",
+    duration: 154,
+  },
+];

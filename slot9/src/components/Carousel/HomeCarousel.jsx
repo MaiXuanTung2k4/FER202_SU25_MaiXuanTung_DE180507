@@ -1,38 +1,39 @@
-import Carousel from "react-bootstrap/Carousel";
-import Badge from "react-bootstrap/Badge";
+import React from "react";
+import { Carousel, Badge } from "react-bootstrap";
+import { carouselMovies } from "../../data/carousel";
 
 export default function HomeCarousel() {
-  const movies = [
-    {
-      title: "Avengers: Endgame",
-      genre: "Action",
-      img: "https://i.imgur.com/UYiroysl.jpg",
-    },
-    {
-      title: "Frozen II",
-      genre: "Animation",
-      img: "https://i.imgur.com/W9qH5uM.jpg",
-    },
-    {
-      title: "Parasite",
-      genre: "Thriller",
-      img: "https://i.imgur.com/4xQKRLl.jpg",
-    },
-  ];
+  if (!Array.isArray(carouselMovies) || carouselMovies.length === 0) return null;
 
   return (
-    <Carousel fade interval={2000}>
-      {movies.map((movie, index) => (
-        <Carousel.Item key={index}>
+    <Carousel interval={3000} data-bs-theme="dark">
+      {carouselMovies.map((m) => (
+        <Carousel.Item key={m.id}>
           <img
             className="d-block w-100"
-            src={movie.img}
-            alt={movie.title}
-            style={{ height: "400px", objectFit: "cover" }}
+            src={m.poster}
+            alt={m.title}
+            style={{ height: 420, objectFit: "cover" }}
           />
-          <Carousel.Caption>
-            <h3>{movie.title}</h3>
-            <Badge bg="info">{movie.genre}</Badge>
+          <Carousel.Caption
+            className="text-start"
+            style={{
+              background: "rgba(0,0,0,0.35)",
+              borderRadius: 12,
+              padding: "0.75rem 1rem",
+              maxWidth: 720,
+            }}
+          >
+            <h3 className="mb-1">
+              {m.title}{" "}
+              <Badge bg="info" className="text-dark">
+                {m.genre}
+              </Badge>{" "}
+              <Badge bg="secondary">{m.year}</Badge>
+            </h3>
+            <p className="mb-0" style={{ fontSize: "0.95rem" }}>
+              {m.description}
+            </p>
           </Carousel.Caption>
         </Carousel.Item>
       ))}
