@@ -7,6 +7,8 @@ import LoginForm2 from './components/LoginForm2.jsx';
 import SearchItem from './components/SearchItem';
 import RegisterForm from './components/RegisterForm';
 import SearchAccount from './components/SearchAccount';
+import FormComponent from './components/FormComponent';
+
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
       <SearchAccount />
       <hr />
       <RegisterForm />
+      <hr />
+      <FormComponent />
     </div>
   );
 }
